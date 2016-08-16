@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Grocery List</title>
+  </head>
+  <body>
+    <form method="post" action="/items">
+      <input type="text" name="item" placeholder="Item" />
+      <input type="number" name="quantity" />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+    <ul>
+      <% for (item in items){ %>
+        <li><%= items[item]["name"] %> - <%= items[item]["quantity"] %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
