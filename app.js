@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const index = require("./routes/index");
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/brello");
+mongoose.connect("mongodb://127.0.0.1/brello");
 
 const app = express();
 app.set("views", path.join(__dirname, "views"));
